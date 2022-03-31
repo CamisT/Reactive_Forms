@@ -1,0 +1,77 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header class="header">
+      <mat-card-title>Cadastro de Usuário</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form action="#" [formGroup]="personalForm" (ngSubmit)="submit()">
+
+        <div class="grow">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input type="text" matInput placeholder="Digite seu nome..." formControlName="name">
+            <mat-error>Campo obrigatório
+              <span *ngIf="personalForm.controls['name'].getError('minlength')">Minimo 3 caracteres</span>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Sobrenome</mat-label>
+            <input type="text" matInput placeholder="Digite seu sobrenome..." formControlName="lastname">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input type="text" matInput placeholder="Digite seu Username..." formControlName="username">
+            <mat-error>Campo obrigatório</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="grow">
+          <mat-form-field id="input" appearance="fill">
+            <mat-label>CPF</mat-label>
+            <input type="tel" matInput placeholder="Digite seu CPF..." formControlName="cpf">
+            <mat-error>Campo obrigatório</mat-error>
+          </mat-form-field>
+
+          <mat-form-field id="input" appearance="fill">
+            <mat-label>Telefone</mat-label>
+            <input type="tel" matInput placeholder="Digite seu telefone..." formControlName="phone">
+            <mat-error>Campo obrigatório</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="grow">
+          <mat-form-field id="input" appearance="fill">
+            <mat-label>Endereço</mat-label>
+            <input type="text" matInput placeholder="Digite seu Endereço..." formControlName="adress">
+            <mat-error>Campo obrigatório</mat-error>
+          </mat-form-field>
+
+          <mat-form-field id="input" appearance="fill">
+            <mat-label>Complemento</mat-label>
+            <input type="text" matInput placeholder="Ex: Fundos, Apartamento" formControlName="complement">
+          </mat-form-field>
+        </div>
+
+        <div class="grow">
+          <mat-form-field id="input" appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input type="password" matInput placeholder="Digite sua senha..." formControlName="password">
+            <mat-error>Campo obrigatório</mat-error>
+          </mat-form-field>
+
+          <mat-form-field id="input" appearance="fill">
+            <mat-label>Confirme sua senha</mat-label>
+            <input type="password" matInput placeholder="Digite sua senha..." formControlName="password2">
+            <mat-error>Campo obrigatório</mat-error>
+          </mat-form-field>
+        </div>
+
+        <button type="submit" id="button" mat-raised-button color="primary"
+          [disabled]="personalForm.invalid  || validarSenha(personalForm.controls['password'].value, personalForm.controls['password2'].value)">Enviar</button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

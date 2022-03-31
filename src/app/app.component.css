@@ -1,0 +1,66 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(images/tsvet-forma-fon-230.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grow {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#input {
+    width: 330px;
+}
+
+#button {
+    width: 700px;
+}
+
+/* .header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/22/15/29/blue-1273089_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mat-card {
+    background-color: rgb(249, 249, 252);
+}
+
+ #main-form {
+    width: 700px;
+    
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grow {
+    width: 340px;
+}
+.button {
+    
+    width: 700px;
+} */
